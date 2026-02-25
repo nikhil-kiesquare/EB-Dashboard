@@ -5,7 +5,7 @@ from dash import Dash, dcc, html, callback_context
 from dash.dependencies import Input, Output, State
 import plotly.express as px
 import pandas as pd
-eb_analytics_dataset=pd.read_parquet("eb_analytics_dataset.parquet")
+eb_analytics_dataset=pd.read_parquet("https://drive.google.com/file/d/1Jb4txZdbRpuQxfMKuxkYKWAl9Q47t-EZ/view?usp=sharing")
 
 def load_image(path):
     with open(path, "rb") as f:
@@ -346,4 +346,5 @@ def update_dashboard(months,circles,discoms,
 
 
 if __name__ == "__main__":
+
     app.run_server(host="0.0.0.0", port=10000)
